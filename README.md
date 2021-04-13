@@ -57,7 +57,7 @@
 
 ```
 type : title
-(body)
+body
 ```
 
 ### Branch
