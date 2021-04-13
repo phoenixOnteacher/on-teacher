@@ -6,7 +6,7 @@
 
 ```
 type : title
-(body)
+body
 ```
 
 1. **Type**
@@ -43,10 +43,11 @@ type : title
 
        ```bash
        $ git commit -m "type : title
-         body)"
-       ```
-
-   - 어떻게 보다는, `무엇을`, `왜` 변경하였는지 설명
+         body1
+         body2"
+    ```
+   
+   - `어떻게` 보다는 `무엇을`, `왜` 변경하였는지 설명
 
 :eyes: 참고 사이트
 
@@ -103,6 +104,7 @@ type : title
 ## Git 명령어
 
 > Git 관련 명령어를 정리했습니다
+>
 > 팀원들은 변경 사항을 Git에 반영하기 전에, 아래 내용을 꼭 확인해 주세요
 
 1. **Pull**
