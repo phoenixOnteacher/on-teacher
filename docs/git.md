@@ -129,7 +129,7 @@ type : title
    $ git commit -m "(커밋 메시지)"
    ```
 
-   - 위의 [Commit message convention](./#Commit-Message)을 지킬 것
+   - 위의 [Commit message convention](#Commit-Message)을 지킬 것
    - 최대한 나눠서 커밋 권장
    - 날짜는 깃에 기록되니 넣지 않아요
 
