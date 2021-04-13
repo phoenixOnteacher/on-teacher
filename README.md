@@ -49,7 +49,7 @@
 
 ## :file_folder: Git Convention
 
-[자세히 보기](./blob/master/docs/git.md)
+[자세히 보기](./docs/git.md)
 
 ### Commit Message
 
