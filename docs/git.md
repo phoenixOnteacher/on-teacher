@@ -62,9 +62,11 @@ body
 
 - `master` : 오류 없는, 배포 가능한 상태
 - `develop` : 개발 중
-- `feature-XXX` : XXX 기능 개발 중
+- `feature/XXX` : XXX 기능 개발 중
 
-팀원들은 기능마다 `feature-XXX` 브랜치를 생성하여 개발하고 **해당 브랜치에 푸시**합니다. 에러 없이 제대로 실행되는지 확인하고, `develop` 브랜치에 머지하여 반영합니다. 머지할 때 팀원들에게 알리고, 다른 팀원들은 pull 받아 최신 상태에서 개발하도록 합니다. 기능 개발이 완료되면, 해당 브랜치는 삭제합니다.
+팀원들은 기능마다 `feature/XXX` 브랜치를 생성하며, 기능 이름 XXX는 Camel Case를 사용해요. 개발 후 **해당 브랜치에 푸시**합니다. 에러 없이 제대로 실행되는지 확인하고, `develop` 브랜치에 머지하여 반영합니다(Github에서 [Pull request](#Pull-request)로 처리). 머지할 때 팀원들에게 알리고, 다른 팀원들은 pull 받아 최신 상태에서 개발하도록 합니다. 기능 개발이 완료되면, 해당 브랜치는 삭제합니다.
+
+문서 작업은 develop 브랜치에서 하셔도 괜찮습니다.
 
 배포 전, develop 브랜치를 master 브랜치에 머지합니다. 팀원이 master에서 작업하는 일은 없어야 합니다. 개발 시 자신의 브랜치을 확인해 주세요. :exclamation:
 
@@ -118,16 +120,33 @@ body
    - develop의 파일들을 내려받아 최신의 상태 유지
    - 개발 중인 코드가 사라지는 것을 방지하기 위해, 본인이 수정한 파일 코드를 다른 데에 옮겨둔 후 pull 받을 것
 
-2. **Add**
+2. **Status**
+
+   ```bash
+   $ git status
+   ```
+
+   - 자신의 브랜치에서의 변경 사항과 상태를 확인할 수 있음
+   
+3. **Add**
 
    ```bash
    $ git add (본인이 수정한 파일)
    ```
 
    - 반드시 **본인이 수정한 파일만** add할 것
+
    - add 하기 전에 pull 받아, 최신 파일에 자신의 코드를 반영시킬 것
 
-3. **Commit**
+   - status로 변경 사항 확인 후 add 권장
+
+   - 여러 파일 동시에 add 가능
+
+     ```bash
+     $ git add (파일1) (파일2) (파일3)
+     ```
+
+4. **Commit**
 
    ```bash
    $ git commit -m "(커밋 메시지)"
@@ -137,7 +156,7 @@ body
    - 최대한 나눠서 커밋 권장
    - 날짜는 깃에 기록되니 넣지 않아요
 
-4. **Push**
+5. **Push**
 
    ```bash
    $ git push origin (자신의 브랜치)
@@ -146,14 +165,53 @@ body
    - 자신의 브랜치에 수정 사항을 반영시키는 작업
    - 반드시 자신의 브랜치에 푸시할 것 :exclamation:
 
-5. **Merge**
+6. **Merge**
 
    ```bash
    $ git merge (브랜치 이름)
    ```
-   
+
    - 문제 없이 잘 실행되는지 확인한 후, `develop` 브랜치에 머지할 것
    - 위의 명령어를 사용하기보다는 Github에서 [Pull request](#Pull-request)로 처리 권장
+
+7. **Clone**
+
+   1. git 저장소(repository)를 복제할 폴더로 이동
+
+      - 그 폴더는 git 저장소가 아니어야 함 (폴더 내에 `.git` 파일이 있으면 해당 폴더는 git 저장소이므로, 그 상위폴더나 다른 폴더에서 클론 하셔야 돼요)
+
+   2. git bash를 열어 명령어 입력
+
+      ```bash
+      $ git clone (깃 저장소 url)
+      ```
+
+      - 저장소 url은 해당 프로젝트 페이지에서 복사할 수 있습니다
+        ![image-20210414174309920](docs_img/image-20210414174309920.png)
+      - 우리 프로젝트 url : https://github.com/phoenixOnteacher/on-teacher.git
+      - bash에서는 `Shift + Insert` 하시면 붙여넣기 돼요! :honey_pot:
+
+   3. 복제 완료
+
+      - 해당 repository 폴더가 생기고, master 상태의 코드가 받아집니다
+
+   4. 개발 시작
+
+      1. 본인 브랜치 생성 및 이동
+
+         ```bash
+         $ git checkout -b (브랜치 이름)
+         ```
+
+         - [브랜치 이름](#Git-Branch)은 아마 `feature-기능 이름`이 될 거예요
+
+      2. develop의 파일 받기
+
+         ```bash
+         $ git pull origin develop
+         ```
+
+      3. 고생 많으셨습니다! 이제 개발 진행하시면 돼요 :slightly_smiling_face:
 
 ## Pull request
 

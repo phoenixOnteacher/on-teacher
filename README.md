@@ -65,7 +65,7 @@ body
 > 기능별로 브랜치를 만들어 개발하고, 오류 확인 후 develop에 merge해요
 
 ```
-feature-기능이름
+feature/기능이름
 ```
 
 
