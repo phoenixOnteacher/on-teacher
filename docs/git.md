@@ -45,9 +45,11 @@ body
        $ git commit -m "type : title
          body1
          body2"
-    ```
+       ```
+   
    
    - `어떻게` 보다는 `무엇을`, `왜` 변경하였는지 설명
+   
 
 :eyes: 참고 사이트
 
@@ -151,5 +153,32 @@ body
    ```
    
    - 문제 없이 잘 실행되는지 확인한 후, `develop` 브랜치에 머지할 것
-   - 위의 명령어를 사용하기보다는 Github에서 `Pull request`로 처리 권장
+   - 위의 명령어를 사용하기보다는 Github에서 [Pull request](#Pull-request)로 처리 권장
+
+## Pull request
+
+1. push 하고나서, Github의 프로젝트에서 해당 브랜치를 선택하면 `Pull request` 버튼이 생김
+
+   ![image-20210414043436179](docs_img/image-20210414043436179.png)
+
+   - `Compare` 버튼을 누르면 변경 전후 비교 가능
+     ![image-20210414044019033](docs_img/image-20210414044019033.png)
+
+2. Pull request 관련 설정
+
+   ![image-20210414044652772](docs_img/image-20210414044652772.png)
+
+   - 반드시 **base를 develop** 브랜치로 설정 :exclamation:
+   - title, comment 등은 자유롭게 작성
+
+3. 충돌 여부 확인 후 머지
+   ![image-20210414045252211](docs_img/image-20210414045252211.png)
+
+   - `Merge pull request`버튼 누르고 `Confirm하여 머지
+   - 충돌 발생 시, 코드를 비교하여 수동으로 머지
+
+4. 머지 완료 및 브랜치 삭제
+   ![image-20210414045554150](docs_img/image-20210414045554150.png)
+
+   - 머지가 완료되면, 해당 브랜치를 Github에서 바로 삭제할 수 있음 (필수 아님)
 
