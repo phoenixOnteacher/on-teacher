@@ -1,4 +1,4 @@
-package com.onteacher;
+package com.onteacher.controller;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
