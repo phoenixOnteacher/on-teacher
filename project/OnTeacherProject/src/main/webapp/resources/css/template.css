@@ -10,7 +10,9 @@ css의 기본 div 컴포넌트는 wrap과 content입니다.
 div의 id명이나 class명은 해당 컴포넌트의 기능이나 역할에서 따옵니다.
 단, wrap이나 content처럼 다른 css파일에도 동일하게 쓰이는 컴포넌트는 앞에 구분글자를 최소 1개이상 넣어주세요.
 (예: template.css의 wrap과 content id명: #wrap, #content,
-index.css의 wrap과 content id명: #i_wrap, #i_content) */
+index.css의 wrap과 content id명: #i_wrap, #i_content)
+
+프론트엔드 지침서를 확인해주세요! */
 
 
 /* 공통 */
